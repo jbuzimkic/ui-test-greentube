@@ -1,0 +1,112 @@
+<!--
+
+  Frontend Interview Test
+
+  Goal of this test is to style the following product page
+
+  The page contains the following sections
+    * header
+    * hero section
+    * product section with three product items
+    * login section with login form
+    * footer
+
+  - The HTML and CSS is just a raw structure of the page, can be modified as much as you want
+  - Responsive Design, the product page should look beautiful on mobile and on bigger screens
+  - There should be two themes available, a light and a dark version
+  - Use CSS Custom Properties for all colors and switch their values by the theme class
+
+  Have fun
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Interview Test</title>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <!-- header -->
+  <div class="header">Header</div>
+
+  <!-- hero section -->
+  <div class="hero-section">
+    <img src="https://placeimg.com/420/120/tech">
+  </div>
+
+  <!-- page -->
+  <div class="page">
+
+    <!-- products section -->
+    <div class="products-section">
+      <div class="headline">Products</div>
+      <div class="product-items">
+        <div class="product-item">
+          <div class="image">
+            <img src="https://placeimg.com/400/200/tech">
+          </div>
+          <div class="content">
+            <div class="title">Lorem ipsum dolor sit amet</div>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit explicabo corrupti deserunt quae nulla error</div>
+            <div class="read-more">
+              <a href="/">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-item">
+          <div class="image">
+            <img src="https://placeimg.com/400/200/tech">
+          </div>
+          <div class="content">
+            <div class="title">Lorem ipsum dolor sit amet</div>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit explicabo corrupti deserunt quae nulla error</div>
+            <div class="read-more">
+              <a href="/">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-item">
+          <div class="image">
+            <img src="https://placeimg.com/400/200/tech">
+          </div>
+          <div class="content">
+            <div class="title">Lorem ipsum dolor sit amet</div>
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit explicabo corrupti deserunt quae nulla error</div>
+            <div class="read-more">
+              <a href="/">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- login section -->
+    <div class="login-section">
+      <div class="headline">Login</div>
+      <div class="login-form">
+        <form action="action_page.php" method="post">
+          <div>
+            <label for="name"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="name" required>
+          </div>
+          <div>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">Footer</div>
+</body>
+
+</html>
