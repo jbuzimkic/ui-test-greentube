@@ -1,0 +1,278 @@
+<!--
+
+  Frontend Interview Test
+
+  Goal of this test is to style the following product page
+
+  The page contains the following sections
+    * header
+    * hero section
+    * product section with three product items
+    * login section with login form
+    * footer
+
+  - The HTML and CSS is just a raw structure of the page, can be modified as much as you want
+  - Responsive Design, the product page should look beautiful on mobile and on bigger screens
+  - There should be two themes available, a light and a dark version
+  - Use CSS Custom Properties for all colors and switch their values by the theme class
+
+  Have fun
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Interview Test</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+</head>
+
+<body>
+  <!-- header -->
+  <div class="header grid-templates-header" id="header">
+    <div class="header-logo">
+      <img src="assets/images/logo.png" alt="company logo image">
+    </div>
+    <div class="header-title">
+      <p>Products page title</p>
+    </div>
+    <div class="header-navigation">
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a onclick="changeTheme()" id="fa-sun"><i class="fas fa-sun"></i></a></li>
+        <li><a onclick="changeTheme()" class="display-none" id="fa-moon"><i class="fas fa-moon"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- hero section -->
+  <div class="hero-section">
+    <div class="hero-section-text">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a href="#login">Login</a>
+    </div>
+    <div class="hero-section-image">
+      <img src="https://placeimg.com/420/120/tech">
+    </div>
+  </div>
+
+  <!-- page -->
+  <div class="page" id="products">
+
+    <!-- products section -->
+    <div class="products-section">
+      <div class="headline">Products</div>
+      <div class="product-items grid-templates">
+        <div class="product-item first-product-item">
+          <div class="image">
+            <img src="https://placeimg.com/400/200/tech">
+          </div>
+          <div class="content">
+            <div class="title">
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="sub-title">
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="desc">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit explicabo corrupti deserunt quae nulla error</p>
+            </div>
+            <div class="read-more">
+              <a onclick="collapseReadMore('first-product')">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="read-more-wrapper" id="first-product">
+          <div class="more-about-product">
+            <p><strong>More about this product</strong></p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="specification-of-product">
+            <p><strong>Specification fot this product</strong></p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="related-items">
+            <p><strong>Related items</strong></p>
+            <ul>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-item second-product-item">
+          <div class="image">
+            <img src="https://placeimg.com/400/200/tech">
+          </div>
+          <div class="content">
+            <div class="title">
+              <p>
+                Lorem ipsum dolor sit amet
+              </p>
+            </div>
+            <div class="sub-title">
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit explicabo corrupti deserunt quae nulla error
+              </p>
+            </div>
+            <div class="read-more">
+              <a onclick="collapseReadMore('second-product')">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="read-more-wrapper" id="second-product">
+          <div class="more-about-product">
+            <p><strong>More about this product</strong></p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="specification-of-product">
+            <p><strong>Specification fot this product</strong></p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="related-items">
+            <p><strong>Related items</strong></p>
+            <ul>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-item last-product-items">
+          <div class="image">
+            <img src="https://placeimg.com/400/200/tech">
+          </div>
+          <div class="content">
+            <div class="title">
+              <p>
+                Lorem ipsum dolor sit amet
+              </p>
+            </div>
+            <div class="sub-title">
+              <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem suscipit explicabo corrupti deserunt quae nulla error
+              </p>
+            </div>
+            <div class="read-more">
+              <a onclick="collapseReadMore('last-product')">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="read-more-wrapper" id="last-product">
+          <div class="more-about-product">
+            <p><strong>More about this product</strong></p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="specification-of-product">
+            <p><strong>Specification fot this product</strong></p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="related-items">
+            <p><strong>Related items</strong></p>
+            <ul>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+              <li>
+                <a href="#products">lorem inpsum</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- login section -->
+    <div class="login-section" id="login">
+      <div class="headline">
+        <h1>Login</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="login-form">
+        <form method="post">
+          <div>
+            <label for="name"><b>Username</b></label>
+            <input type="text" class="input-design" name="name" required>
+          </div>
+          <div>
+            <label for="password"><b>Password</b></label>
+            <input type="password" class="input-design" name="password" required>
+          </div>
+          <div class="login-form-buttons">
+            <a href="#login">Forgot password?</a>
+            <button type="submit" class="button-design">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="footer-copyright">
+      <p>Copyright 2021 Jasmina / All Rights Reserved / Privacy Policy / v.1.0.0</p>
+    </div>
+    <div class="footer-social-media">
+      <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f fa-lg"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube lg"></i></a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/js/stickyNavigation.js"></script>
+  <script type="text/javascript" src="assets/js/collapseReadMore.js"></script>
+  <script type="text/javascript" src="assets/js/changeTheme.js"></script>
+
+</body>
+
+</html>
